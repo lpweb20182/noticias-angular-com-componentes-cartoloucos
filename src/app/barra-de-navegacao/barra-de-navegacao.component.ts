@@ -1,6 +1,13 @@
 import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 
-
+/**
+ * Componente BarraDeNavegacaoComponent.
+ *
+ * O componente recebe como entrada o nome da tela que foi selecionada. Clicando em uma
+ * opcao da barra de naveção, o componente dispara um evento para permitir o componente host,
+ * saber qual tela foi escolhida, e direcioná-lo para a mesma com todas as suas funcionalidades
+ * carregadas.
+ */
 @Component({
   selector: 'app-barra-de-navegacao',
   templateUrl: './barra-de-navegacao.component.html',

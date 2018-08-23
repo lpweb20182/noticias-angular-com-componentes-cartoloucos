@@ -5,21 +5,7 @@
 
 <app-noticias-recentes [noticias]="noticiasPublicadas()" (mostrou)="onMostrou($event)" *ngIf="tela == 'home'"></app-noticias-recentes>
 
-<div *ngIf="tela == 'leitura' && leituraNoticia">
-  <h2>{{ leituraNoticia.titulo }}</h2>
-  <div class="leitura-noticia-info">
-    Por {{ leituraNoticia.autor }}
-    <span *ngIf="leituraNoticia.emailDoAutor">({{ leituraNoticia.emailDoAutor }})</span>
-    em {{ leituraNoticia.data | date }}
-  </div>
-  <hr>
-  <div class="leitura-noticia-conteudo">
-    {{ leituraNoticia.conteudo }}
-  </div>
-  <div class="leitura-noticia-rodape">
-    <button (click)="fechar()">Fechar</button>
-  </div>
-</div>
+<app-leitor-de-noticia [leituraNoticia]="leituraNoticia" (fechou)="fechar()" *ngIf="tela == 'leitura'"></app-leitor-de-noticia> 
 
 <div *ngIf="tela == 'lista'">
   <h2>Todas as notícias</h2>
