@@ -7,6 +7,7 @@ import { NoticiasRecentesComponent } from './noticias-recentes/noticias-recentes
 import { BarraDeNavegacaoComponent } from './barra-de-navegacao/barra-de-navegacao.component';
 import { LeitorDeNoticiaComponent } from './leitor-de-noticia/leitor-de-noticia.component';
 import { TodasAsNoticiasComponent } from './todas-as-noticias/todas-as-noticias.component';
+import { CadastrarNoticiaComponent } from './cadastrar-noticia/cadastrar-noticia.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TodasAsNoticiasComponent } from './todas-as-noticias/todas-as-noticias.
     NoticiasRecentesComponent,
     BarraDeNavegacaoComponent,
     LeitorDeNoticiaComponent,
-    TodasAsNoticiasComponent
+    TodasAsNoticiasComponent,
+    CadastrarNoticiaComponent
   ],
   imports: [
     BrowserModule,

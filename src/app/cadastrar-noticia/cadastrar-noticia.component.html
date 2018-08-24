@@ -1,19 +1,4 @@
-<h1>Notícias::Angular</h1>
-<hr>
-<app-barra-de-navegacao (apontou)="irPara($event)"></app-barra-de-navegacao>
-<hr>
-
-<app-noticias-recentes [noticias]="noticiasPublicadas()" (mostrou)="onMostrou($event)" *ngIf="tela == 'home'"></app-noticias-recentes>
-
-<app-leitor-de-noticia [leituraNoticia]="leituraNoticia" (fechou)="fechar()" *ngIf="tela == 'leitura'"></app-leitor-de-noticia> 
-
-<app-todas-as-noticias *ngIf="tela == 'lista'" [noticias]="noticiasPublicadas()"
-                        (editor)="editar($event)" (remover)="excluir($event)"></app-todas-as-noticias>
-
-<app-cadastrar-noticia *ngIf="tela == 'cadastro'" (salvou)="salvar($event)"></app-cadastrar-noticia>                        
-
-
-<div *ngIf="tela == edicao'">
+<div>
   <h2>Cadastrar notícia</h2>
   <form #cadastro="ngForm" (submit)="salvar(cadastro)">
     <div>
@@ -38,8 +23,7 @@
     </div>
     <div>
       <button type="submit" [disabled]="!cadastro.form.valid">Salvar</button>
-      <button type="reset" *ngIf="tela == 'cadastro'" formnovalidate>Limpar</button>
-      <button *ngIf="tela == 'edicao'" (click)="cancelarEdicao()" formnovalidate>Cancelar</button>
+      <button type="reset" formnovalidate>Limpar</button>
     </div>
   </form>
 </div>
