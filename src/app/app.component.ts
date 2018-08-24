@@ -72,10 +72,7 @@ export class AppComponent implements OnInit {
    */
   editarNoticia = null;
 
-  /**
-   * Atributo utilizado para controlar a pesquisa da lista de notícias
-   */
-  listaPesquisa = null;
+
 
   /**
    * Implementação da interface {@link OnInit}. Define dados de exemplo
@@ -187,26 +184,6 @@ export class AppComponent implements OnInit {
       this.autor = null;
       this.emailDoAutor = null;
       this.data = null;
-    }
-  }
-
-  /**
-   * Encontra e retorna as notícias para a lista conforme o campo 
-   * de pesquisa [`listaPesquisa`]{@link AppComponent#listaPesquisa}
-   * considerando que seu valor está presente no título, conteúdo ou 
-   * nome do autor.
-   * 
-   * @returns A lista de notícias para apresentar
-   */
-  noticiasParaLista() {
-    if (this.listaPesquisa) {
-      return this.noticias.filter(n =>
-        n.titulo.indexOf(this.listaPesquisa) !== -1
-        || n.conteudo.indexOf(this.listaPesquisa) !== -1
-        || n.autor.indexOf(this.listaPesquisa) !== -1
-      );
-    } else {
-      return this.noticias;
     }
   }
 

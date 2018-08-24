@@ -7,9 +7,8 @@
 
 <app-leitor-de-noticia [leituraNoticia]="leituraNoticia" (fechou)="fechar()" *ngIf="tela == 'leitura'"></app-leitor-de-noticia> 
 
-<app-todas-as-noticias *ngIf="tela == 'lista'" [allNoticias]="noticiasParaLista()"
-                      [pesquisar]="listaPesquisa" (editor)="editar($event)"
-                      (remover)="excluir($event)"></app-todas-as-noticias>
+<app-todas-as-noticias *ngIf="tela == 'lista'" [noticias]="noticiasPublicadas()"
+                        (editor)="editar($event)" (remover)="excluir($event)"></app-todas-as-noticias>
 
 <div *ngIf="tela == 'cadastro' || tela == 'edicao'">
   <h2>Cadastrar notícia</h2>
