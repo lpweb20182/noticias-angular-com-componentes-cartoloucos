@@ -1,3 +1,9 @@
+# Membros do time
+
+* LUCAS COSTA DA SILVA
+* MATEUS RODRIGUES COSTA
+* THIAGO APARECIDO DA SILVA
+
 # WebdevbookNoticiasAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
